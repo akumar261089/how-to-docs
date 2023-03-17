@@ -24,7 +24,7 @@ If you want to run tensorflow on old machine. and getting warnings or AVX or sse
     - `cd tensorflow `
     - `git checkout -b newbranch v2.11.0`
 2. Build using Bazel. Update ram/cpu& jobs as per system config - it can take updato 10 hours
-    - ` - bazel build --config=opt --local_ram_resources=2048 --local_cpu_resources=HOST_CPUS-1 --jobs=1
+    - `bazel build --config=opt --local_ram_resources=2048 --local_cpu_resources=HOST_CPUS-1 --jobs=1
   //tensorflow/tools/pip_package:build_pip_package`
 3. Compiled TensorFlow into a Python Wheel package
     - `./bazel-bin/tensorflow/tools/pip_package/build_pip_package /tmp/tensorflow_pkg`
